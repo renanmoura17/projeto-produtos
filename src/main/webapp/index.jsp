@@ -58,7 +58,7 @@
 				</div>
 
 				<div class="col s6">
-					<form class="" action="" method="post">
+					<form class="" action="views/produtos.jsp" method="post">
 
 						<div class="input-field">
 							<input type="text" name="titulo" class="red-text"/>
