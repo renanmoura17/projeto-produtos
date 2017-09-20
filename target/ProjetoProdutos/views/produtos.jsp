@@ -1,7 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Produtos</title>
+		<title>${titulo}</title>
 		<meta charset="utf-8">
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,7 +30,7 @@
 					<a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 					
 					<ul class="left hide-on-med-and-down">
-						<li><a href="/">Revis„o de ades„o</a></li>
+						<li><a href="/">Revis√£o de ades√£o</a></li>
 					</ul>
 
 					<!-- Menu lateral expansivel -->
@@ -32,7 +38,7 @@
 					</ul>
 					
 					<ul class="side-nav" id="mobile">
-						<li><a href="/">Revis„o de ades„o</a></li>
+						<li><a href="/">Revis√£o de ades√£o</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -48,30 +54,38 @@
 						<table>
 							<thead>
 								<tr>
+									<th>ID</th>
 									<th>Nome</th>
-									<th>CPF</th>
-									<th>Valor</th>
-									<th>Data</th>
+									<th>Foto</th>
+									<th>Pre√ßo</th>
 								</tr>
 							</thead>
 
 							<tbody>
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
+								<c:forEach items="${ produtos }" var="produto">
+									<tr>
+										<td>${ produto.id }</td>
+										<td>${ produto.nome }</td>
+										<td>${ produto.foto }</td>
+										<td>${ produto.preco }</td>
+									</tr>
+								</c:forEach>
 
 							</tbody>
+							
+							<tfoot>
+								<tr>
+									<td colspan="4">Produtos Cadastrados: ${ produtos.size() }</td>
+								</tr>
+							</tfoot>
 						</table>
 					</div>
 
 					<div>
-						<a class="btn indigo teal" href="{{ route('admin.cursos.adicionar') }}">Adicionar</a>
+						<a class="btn red" href="">Adicionar</a>
 					</div>
+				</div>
 			</div>
-			
 		</div>
 
 		<!-- Carregamento do jQuery e do materialize.js-->

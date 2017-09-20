@@ -24,11 +24,15 @@ public class Produto {
 	
 	@NotNull
 	@NotEmpty
-	private float preco;
+	private Float preco;
 	
 	@Lob
 	private Blob foto;
 
+	public Long getId() {
+		return id;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
