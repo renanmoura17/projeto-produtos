@@ -13,22 +13,26 @@
 		
 			<div class="box-modal" >
 				<div class="input-field">
-					<input type="text" name="titulo" class="red-text" required /> 
+					<input type="text" id="nome" name="nome" class="red-text" required /> 
 					<label class="red-text">Nome*</label>
 				</div>
 				
 				<div class="input-field">
-					<input type="text" name="titulo" class="red-text" required /> 
+					<input type="text" id="preco" name="preco" class="red-text" required /> 
 					<label class="red-text">Preço*</label>
 				</div>
-				
-				<div class="input-field">
-					<input type="text" name="foto" class="red-text" /> 
-					<label class="red-text">Foto (Opcional)</label>
+
+				<div class="file-field input-field">
+					<div class="btn red">
+						<span>Foto</span> <input type="file" id="foto" name="foto">
+					</div>
+					<div class="file-path-wrapper">
+						<input class="file-path validate" type="text">
+					</div>
 				</div>
 			</div>
 
-			<div class="modal-footer">
+			<div class="container modal-footer">
 				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">
 					Cancelar 
 				</a> 

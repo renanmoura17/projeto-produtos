@@ -46,6 +46,14 @@
 		<div class="container box-default">
 	
 			<div id="box-principal" class="row">
+				
+				<!-- Se um erro ocorrer, a variavel mensagemErro o exibira de forma menos desagradavel ao usuario-->
+				<c:if test="${ not empty mensagemErro }">
+					<div class="container">
+						${ mensagemErro }
+					</div>
+				</c:if>
+				
 				<div class="container">
 
 					<div class="row">
@@ -85,11 +93,11 @@
 						
 					</div>
 
-				</div>
+				</div>				
 			</div>
 		</div>
 		
-		<!-- Janela modal de cadastro e alteracao de produtos -->
+		<!-- Janela modal de cadastro e al de produtos -->
 		<jsp:include page="modal-produto.jsp"/>
 
 		<!-- Carregamento do jQuery e do materialize.js-->

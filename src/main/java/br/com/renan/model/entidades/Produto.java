@@ -41,11 +41,11 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public float getPreco() {
+	public Float getPreco() {
 		return preco;
 	}
 
-	public void setPreco(float preco) {
+	public void setPreco(Float preco) {
 		this.preco = preco;
 	}
 

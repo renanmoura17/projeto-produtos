@@ -24,6 +24,6 @@ body {
     height: auto;
 }
 
-#box-principal {
+#box-principal, .box-modal {
 	padding: 50px;
 }
