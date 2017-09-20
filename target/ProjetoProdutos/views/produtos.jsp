@@ -8,16 +8,15 @@
 <html>
 	<head>
 		<title>${titulo}</title>
-		<meta charset="utf-8">
+
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!--Import materialize.css-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-		<link rel="stylesheet" href="../css/estilo.css">
-
-		<!--Let browser know website is optimized for mobile-->
+		<link rel="stylesheet" href="../../css/estilo.css">
+		
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+		
 	</head>
 	<body>
 
@@ -79,14 +78,19 @@
 								</tr>
 							</tfoot>
 						</table>
+						
+						<div>
+							<a class="waves-effect waves-light btn modal-trigger red" href="#modal-produto">Adicionar Produto</a>
+						</div>
+						
 					</div>
 
-					<div>
-						<a class="btn red" href="">Adicionar</a>
-					</div>
 				</div>
 			</div>
 		</div>
+		
+		<!-- Janela modal de cadastro de produtos -->
+		<jsp:include page="modal-produto.jsp"/>
 
 		<!-- Carregamento do jQuery e do materialize.js-->
 	    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -95,8 +99,11 @@
 
 	    	$(document).ready(function() {
 	    		Materialize.updateTextFields();
+	    		
+	    		$('#modal-produto').modal();
 
 	    		$(".button-collapse").sideNav();
+	    		
 	    	});
 
 	    </script>
