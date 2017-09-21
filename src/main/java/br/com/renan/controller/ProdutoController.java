@@ -34,7 +34,7 @@ public class ProdutoController {
 		return "produtos";
 	}
 	
-	@RequestMapping(value = "adicionar-produtos", method = RequestMethod.POST)
+	@RequestMapping(value = "adiciona-produto", method = RequestMethod.POST)
 	@ResponseStatus(value=HttpStatus.OK)
 	public String adicionarProduto ( @Valid @ModelAttribute Produto produto, BindingResult bindingResult, RedirectAttributes redirectAttributes ) {
 		if ( bindingResult.hasErrors() ) {
@@ -45,7 +45,8 @@ public class ProdutoController {
 			redirectAttributes.addFlashAttribute("mensagem", "O produto foi adicionado corretamente!");
 		}
 		
-		return "redirect:lista-produtos";
+		return "redirect:/app/lista/lista-produtos";
+		//return "redirect:lista-produtos";
 		//return "produtos";
 	}
 	

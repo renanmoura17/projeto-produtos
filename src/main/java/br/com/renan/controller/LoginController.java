@@ -33,13 +33,12 @@ public class LoginController {
 	
 	//produtos/app/lista/lista-produtos
 	@RequestMapping(value = "/", method = RequestMethod.POST)
-	@ResponseStatus(value=HttpStatus.OK)
 	public String logar( @Valid @ModelAttribute Usuario usuario, BindingResult bindingResult, 
 			RedirectAttributes redirectAttributes, Model model ) {
 		
 		//Fazer tratamento do login
 		
-		return "produtos"; 
+		return "redirect:/app/lista/lista-produtos"; 
 		
 	}
 }
