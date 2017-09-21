@@ -24,7 +24,7 @@ public class ProdutoController {
 	
 	@Autowired private ProdutoRepositorio produtoRepositorio;
 	
-	@RequestMapping(value = "lista-produtos", method = RequestMethod.GET)
+	@RequestMapping(value = "lista-produtos")
 	public String listarProdutos( Model model ) {
 		Iterable<Produto> produtos = produtoRepositorio.findAll();
 		
@@ -34,18 +34,19 @@ public class ProdutoController {
 		return "produtos";
 	}
 	
-	@RequestMapping(value = "lista-produtos", method = RequestMethod.POST)
+	@RequestMapping(value = "adicionar-produtos", method = RequestMethod.POST)
 	@ResponseStatus(value=HttpStatus.OK)
 	public String adicionarProduto ( @Valid @ModelAttribute Produto produto, BindingResult bindingResult, RedirectAttributes redirectAttributes ) {
-		
 		if ( bindingResult.hasErrors() ) {
 			FieldError error = bindingResult.getFieldErrors().get(0);
-			redirectAttributes.addFlashAttribute("mensagemErro", "Não foi possível salvar o produto. " + error.getField() + " " + error.getDefaultMessage());
+			redirectAttributes.addFlashAttribute("mensagem", "Não foi possível salvar o produto. " + error.getField() + " " + error.getDefaultMessage());
 		} else {
 			produtoRepositorio.save(produto);
+			redirectAttributes.addFlashAttribute("mensagem", "O produto foi adicionado corretamente!");
 		}
 		
-		return "redirect:/app/lista";
+		return "redirect:lista-produtos";
+		//return "produtos";
 	}
 	
 }

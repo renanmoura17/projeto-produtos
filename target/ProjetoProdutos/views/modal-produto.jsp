@@ -13,12 +13,12 @@
 		
 			<div class="box-modal" >
 				<div class="input-field">
-					<input type="text" id="nome" name="nome" class="red-text" required /> 
+					<input type="text" id="nome" name="nome" class="red-text"  /> 
 					<label class="red-text">Nome*</label>
 				</div>
 				
 				<div class="input-field">
-					<input type="text" id="preco" name="preco" class="red-text" required /> 
+					<input type="text" id="preco" name="preco" class="red-text"  /> 
 					<label class="red-text">Preço*</label>
 				</div>
 

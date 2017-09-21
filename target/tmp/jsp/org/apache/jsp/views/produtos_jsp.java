@@ -195,15 +195,15 @@ public final class produtos_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_if_0.setPageContext(_jspx_page_context);
     _jspx_th_c_if_0.setParent(null);
-    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ not empty mensagemErro }", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ not empty mensagem }", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
         out.write("\t\t\t\t\t<div class=\"container\">\r\n");
-        out.write("\t\t\t\t\t\t");
-        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ mensagemErro }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-        out.write("\r\n");
+        out.write("\t\t\t\t\t\t<h6 class=\"box-mensagem center\"> ");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ mensagem }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write(" </h6>\r\n");
         out.write("\t\t\t\t\t</div>\r\n");
         out.write("\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();

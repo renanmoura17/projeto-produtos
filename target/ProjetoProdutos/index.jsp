@@ -29,9 +29,11 @@
 
 					<!-- Menu lateral expansivel -->
 					<ul class="right hide-on-med-and-down">
-						<a href="">
-							<i class="large material-icons">email</i>
-						</a>
+						<li>
+							<a href="/">
+								<i class="large material-icons">email</i>
+							</a>
+						</li>
 					</ul>
 					
 					<ul class="side-nav" id="mobile">

@@ -55,12 +55,12 @@ public final class modal_002dproduto_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("\t\t\r\n");
       out.write("\t\t\t<div class=\"box-modal\" >\r\n");
       out.write("\t\t\t\t<div class=\"input-field\">\r\n");
-      out.write("\t\t\t\t\t<input type=\"text\" id=\"nome\" name=\"nome\" class=\"red-text\" required /> \r\n");
+      out.write("\t\t\t\t\t<input type=\"text\" id=\"nome\" name=\"nome\" class=\"red-text\"  /> \r\n");
       out.write("\t\t\t\t\t<label class=\"red-text\">Nome*</label>\r\n");
       out.write("\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\r\n");
       out.write("\t\t\t\t<div class=\"input-field\">\r\n");
-      out.write("\t\t\t\t\t<input type=\"text\" id=\"preco\" name=\"preco\" class=\"red-text\" required /> \r\n");
+      out.write("\t\t\t\t\t<input type=\"text\" id=\"preco\" name=\"preco\" class=\"red-text\"  /> \r\n");
       out.write("\t\t\t\t\t<label class=\"red-text\">Preço*</label>\r\n");
       out.write("\t\t\t\t</div>\r\n");
       out.write("\r\n");

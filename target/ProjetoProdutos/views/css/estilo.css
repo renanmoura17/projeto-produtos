@@ -1,0 +1,43 @@
+body {
+	background: #FFF3F3;
+}
+
+.box-default {
+	background: white;
+	
+	width: 60%;
+	height: 100%;
+
+	box-shadow: 0px 10px 15px #D4D4D4;
+}
+
+.alinhamento-central {
+	text-align: center;
+}
+
+.img-padrao {
+	max-width:100px;
+    max-height:150px;
+    min-width:100px;
+    min-height:100px;
+    width: auto;
+    height: auto;
+}
+
+.box-modal {
+	padding: 50px;	
+}
+
+.box-mensagem {
+	background: blue;
+	
+	margin: 0 auto;
+	padding: 20px;
+
+	box-shadow: 0px 10px 15px #D4D4D4;
+}
+
+#box-principal {
+	padding: 10px;
+}
+

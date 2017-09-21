@@ -23,11 +23,10 @@ public class Produto {
 	private String nome;
 	
 	@NotNull
-	@NotEmpty
 	private Float preco;
 	
 	@Lob
-	private Blob foto;
+	private String foto;
 
 	public Long getId() {
 		return id;
@@ -49,11 +48,11 @@ public class Produto {
 		this.preco = preco;
 	}
 
-	public Blob getFoto() {
+	public String getFoto() {
 		return foto;
 	}
 
-	public void setFoto(Blob foto) {
+	public void setFoto(String foto) {
 		this.foto = foto;
 	}
 
