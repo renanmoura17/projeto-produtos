@@ -63,8 +63,8 @@
 								<tr>
 									<th>ID</th>
 									<th>Nome</th>
-									<th>Foto</th>
 									<th>Preço</th>
+									<th>Ação</th>
 								</tr>
 							</thead>
 
@@ -73,24 +73,21 @@
 									<tr>
 										<td>${ produto.id }</td>
 										<td>${ produto.nome }</td>
-										<td>${ produto.foto }</td>
-										<td>${ produto.preco }</td>
+										<td>R$ ${ produto.preco }</td>
+										<td>
+											<button class="btn" type="submit">Editar</button>
+											<button class="btn" type="submit">Deletar</button>
+										</td>
 									</tr>
 								</c:forEach>
-
 							</tbody>
-							
-							<tfoot>
-								<tr>
-									<td colspan="4">Produtos Cadastrados: ${ produtos.size() }</td>
-								</tr>
-							</tfoot>
+					
 						</table>
 						
-						<div>
-							<a class="waves-effect waves-light btn modal-trigger red" href="#modal-produto">Adicionar Produto</a>
-						</div>
-						
+					</div>
+					
+					<div class="row">
+						<a class="waves-effect waves-light btn modal-trigger red" href="#modal-produto">Adicionar Produto</a>
 					</div>
 
 				</div>				

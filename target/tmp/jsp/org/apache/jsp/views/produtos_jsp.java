@@ -13,6 +13,7 @@ public final class produtos_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -23,11 +24,13 @@ public final class produtos_jsp extends org.apache.jasper.runtime.HttpJspBase
   public void _jspInit() {
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_forEach_var_items.release();
     _jspx_tagPool_c_if_test.release();
+    _jspx_tagPool_c_url_value_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -120,8 +123,8 @@ public final class produtos_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t\t<tr>\r\n");
       out.write("\t\t\t\t\t\t\t\t\t<th>ID</th>\r\n");
       out.write("\t\t\t\t\t\t\t\t\t<th>Nome</th>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t<th>Foto</th>\r\n");
       out.write("\t\t\t\t\t\t\t\t\t<th>Preço</th>\r\n");
+      out.write("\t\t\t\t\t\t\t\t\t<th>Ação</th>\r\n");
       out.write("\t\t\t\t\t\t\t\t</tr>\r\n");
       out.write("\t\t\t\t\t\t\t</thead>\r\n");
       out.write("\r\n");
@@ -130,22 +133,14 @@ public final class produtos_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("\r\n");
       out.write("\t\t\t\t\t\t\t</tbody>\r\n");
-      out.write("\t\t\t\t\t\t\t\r\n");
-      out.write("\t\t\t\t\t\t\t<tfoot>\r\n");
-      out.write("\t\t\t\t\t\t\t\t<tr>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t<td colspan=\"4\">Produtos Cadastrados: ");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ produtos.size() }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</td>\r\n");
-      out.write("\t\t\t\t\t\t\t\t</tr>\r\n");
-      out.write("\t\t\t\t\t\t\t</tfoot>\r\n");
+      out.write("\t\t\t\t\t\r\n");
       out.write("\t\t\t\t\t\t</table>\r\n");
       out.write("\t\t\t\t\t\t\r\n");
-      out.write("\t\t\t\t\t\t<div>\r\n");
-      out.write("\t\t\t\t\t\t\t<a class=\"waves-effect waves-light btn modal-trigger red\" href=\"#modal-produto\">Adicionar Produto</a>\r\n");
-      out.write("\t\t\t\t\t\t</div>\r\n");
-      out.write("\t\t\t\t\t\t\r\n");
+      out.write("\t\t\t\t\t</div>\r\n");
+      out.write("\t\t\t\t\t\r\n");
+      out.write("\t\t\t\t\t<div class=\"row\">\r\n");
+      out.write("\t\t\t\t\t\t<a class=\"waves-effect waves-light btn modal-trigger red\" href=\"#modal-produto\">Adicionar Produto</a>\r\n");
       out.write("\t\t\t\t\t</div>\r\n");
       out.write("\r\n");
       out.write("\t\t\t\t</div>\t\t\t\t\r\n");
@@ -242,12 +237,16 @@ public final class produtos_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("\t\t\t\t\t\t\t\t\t\t<td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ produto.nome }", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</td>\r\n");
-          out.write("\t\t\t\t\t\t\t\t\t\t<td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ produto.foto }", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
-          out.write("\t\t\t\t\t\t\t\t\t\t<td>");
+          out.write("\t\t\t\t\t\t\t\t\t\t<td>R$ ");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ produto.preco }", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</td>\r\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t<td>\r\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn\" type=\"submit\">Editar</button>\r\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t\t<a class=\"btn\" href=\"");
+          if (_jspx_meth_c_url_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
+            return true;
+          out.write("\">Deletar</a>\r\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t</td>\r\n");
           out.write("\t\t\t\t\t\t\t\t\t</tr>\r\n");
           out.write("\t\t\t\t\t\t\t\t");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
@@ -266,6 +265,24 @@ public final class produtos_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_c_forEach_0.doFinally();
       _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
     }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_0 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
+    _jspx_th_c_url_0.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/app/lista/lista-produtos/${produto.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_c_url_0 = _jspx_th_c_url_0.doStartTag();
+    if (_jspx_th_c_url_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_0);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_0);
     return false;
   }
 }

@@ -13,18 +13,18 @@
 		
 			<div class="box-modal" >
 				<div class="input-field">
-					<input type="text" id="nome" name="nome" class="red-text"  /> 
+					<input type="text" id="nome" name="nome" class="red-text" required /> 
 					<label class="red-text">Nome*</label>
 				</div>
 				
 				<div class="input-field">
-					<input type="text" id="preco" name="preco" class="red-text"  /> 
+					<input type="text" id="preco" name="preco" class="red-text" required  /> 
 					<label class="red-text">Preço*</label>
 				</div>
 
 				<div class="file-field input-field">
 					<div class="btn red">
-						<span>Foto</span> <input type="file" id="foto" name="foto">
+						<span>Foto</span> <input type="file" id="foto" name="foto"/>
 					</div>
 					<div class="file-path-wrapper">
 						<input class="file-path validate" type="text">
