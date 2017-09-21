@@ -106,12 +106,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t<form method=\"post\">\r\n");
       out.write("\r\n");
       out.write("\t\t\t\t\t\t<div class=\"input-field\">\r\n");
-      out.write("\t\t\t\t\t\t\t<input type=\"text\" name=\"titulo\" class=\"red-text\"/>\r\n");
+      out.write("\t\t\t\t\t\t\t<input type=\"text\" name=\"titulo\" class=\"red-text\" required/>\r\n");
       out.write("\t\t\t\t\t\t\t<label class=\"red-text\">Nome de usuário</label>\r\n");
       out.write("\t\t\t\t\t\t</div>\r\n");
       out.write("\r\n");
       out.write("\t\t\t\t\t\t<div class=\"input-field\">\r\n");
-      out.write("\t\t\t\t\t\t\t<input type=\"text\" name=\"titulo\" class=\"red-text\"/>\r\n");
+      out.write("\t\t\t\t\t\t\t<input type=\"password\" name=\"titulo\" class=\"red-text\" required/>\r\n");
       out.write("\t\t\t\t\t\t\t<label class=\"red-text\">Senha</label>\r\n");
       out.write("\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\r\n");

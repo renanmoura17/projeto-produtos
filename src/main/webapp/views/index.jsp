@@ -63,12 +63,12 @@
 					<form method="post">
 
 						<div class="input-field">
-							<input type="text" name="titulo" class="red-text"/>
+							<input type="text" name="titulo" class="red-text" required/>
 							<label class="red-text">Nome de usuário</label>
 						</div>
 
 						<div class="input-field">
-							<input type="text" name="titulo" class="red-text"/>
+							<input type="password" name="titulo" class="red-text" required/>
 							<label class="red-text">Senha</label>
 						</div>
 		

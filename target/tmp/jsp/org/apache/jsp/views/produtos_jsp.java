@@ -105,7 +105,7 @@ public final class produtos_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\r\n");
       out.write("\t\t\t<div id=\"box-principal\" class=\"row\">\r\n");
       out.write("\t\t\t\t\r\n");
-      out.write("\t\t\t\t<!-- Se um erro ocorrer, a variavel mensagemErro o exibira de forma menos desagradavel ao usuario-->\r\n");
+      out.write("\t\t\t\t<!-- Se um erro ocorrer, a variavel mensagem o exibira de forma menos desagradavel ao usuario-->\r\n");
       out.write("\t\t\t\t");
       if (_jspx_meth_c_if_0(_jspx_page_context))
         return;

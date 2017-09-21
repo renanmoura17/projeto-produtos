@@ -47,7 +47,7 @@
 	
 			<div id="box-principal" class="row">
 				
-				<!-- Se um erro ocorrer, a variavel mensagemErro o exibira de forma menos desagradavel ao usuario-->
+				<!-- Se um erro ocorrer, a variavel mensagem o exibira de forma menos desagradavel ao usuario-->
 				<c:if test="${ not empty mensagem }">
 					<div class="container">
 						<h6 class="box-mensagem center"> ${ mensagem } </h6>

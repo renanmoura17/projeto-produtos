@@ -24,8 +24,9 @@ public class ProdutoController {
 	
 	@Autowired private ProdutoRepositorio produtoRepositorio;
 	
-	@RequestMapping(value = "lista-produtos")
+	@RequestMapping(value = "lista-produtos", method = RequestMethod.GET)
 	public String listarProdutos( Model model ) {
+		
 		Iterable<Produto> produtos = produtoRepositorio.findAll();
 		
 		model.addAttribute("titulo", "Listagem de Produtos");
@@ -34,20 +35,20 @@ public class ProdutoController {
 		return "produtos";
 	}
 	
-	@RequestMapping(value = "adiciona-produto", method = RequestMethod.POST)
-	@ResponseStatus(value=HttpStatus.OK)
-	public String adicionarProduto ( @Valid @ModelAttribute Produto produto, BindingResult bindingResult, RedirectAttributes redirectAttributes ) {
+	@RequestMapping(value = "lista-produtos", method = RequestMethod.POST)
+	public String adicionarProduto ( 
+			@Valid @ModelAttribute Produto produto, 
+			BindingResult bindingResult, 
+			RedirectAttributes redirectAttributes ) {
+		
 		if ( bindingResult.hasErrors() ) {
 			FieldError error = bindingResult.getFieldErrors().get(0);
-			redirectAttributes.addFlashAttribute("mensagem", "Não foi possível salvar o produto. " + error.getField() + " " + error.getDefaultMessage());
+			redirectAttributes.addFlashAttribute("mensagem", "Não foi possível salvar o produto. Erro no campo '" + error.getField() + "'");
 		} else {
 			produtoRepositorio.save(produto);
-			redirectAttributes.addFlashAttribute("mensagem", "O produto foi adicionado corretamente!");
 		}
 		
 		return "redirect:/app/lista/lista-produtos";
-		//return "redirect:lista-produtos";
-		//return "produtos";
 	}
 	
 }
